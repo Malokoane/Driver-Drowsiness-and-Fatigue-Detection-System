@@ -1,0 +1,3 @@
+Core Detection LogicFacial Landmark Extraction: 
+
+MediaPipe Face Mesh maps 468 3D facial landmarks on live video frames at low CPU overhead.Eye Aspect Ratio ($\text{EAR}$): Calculates vertical vs. horizontal distance across eye coordinates:$$\text{EAR} = \frac{\vert{}\vert{}p_2 - p_6\vert{}\vert{} + \vert{}\vert{}p_3 - p_5\vert{}\vert{}}{2 \vert{}\vert{}p_1 - p_4\vert{}\vert{}}$$Mouth Aspect Ratio ($\text{MAR}$): Monitors mouth opening to track yawning events:$$\text{MAR} = \frac{\vert{}\vert{}p_{\text{top}} - p_{\text{bottom}}\vert{}\vert{}}{\vert{}\vert{}p_{\text{left}} - p_{\text{right}}\vert{}\vert{}}$$Time-Threshold Filtering: Alarms trigger based on duration rather than raw frame counts, maintaining accuracy across varying camera FPS rates.
