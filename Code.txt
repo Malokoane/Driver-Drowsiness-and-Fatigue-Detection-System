@@ -1,0 +1,34 @@
+Driver-Drowsiness-Detection-System/
+├── .github/
+│   └── workflows/          # GitHub Actions CI/CD pipelines
+│       ├── ci-cd.yml
+│       └── docker-build.yml
+├── app/
+│   ├── api/                # FastAPI WebSockets and REST API routes
+│   │   ├── main.py
+│   │   └── routes.py
+│   ├── core/               # Detection engine, configuration, & structured logging
+│   │   ├── config.py
+│   │   ├── detector.py
+│   │   └── logger.py
+│   └── web/                # Streamlit UI & browser audio engine
+│       ├── audio.py
+│       └── streamlit_app.py
+├── docker/                 # Multi-stage Docker & entrypoint scripts
+│   ├── Dockerfile
+│   ├── Dockerfile.prod
+│   └── entrypoint.sh
+├── config/                 # Nginx proxy & environment rules
+│   ├── .env.example
+│   └── nginx.conf
+├── scripts/                # One-click bootstrap & setup tools
+│   ├── setup.sh
+│   ├── bootstrap.sh
+│   └── health_check.sh
+├── tests/                  # Pytest unit & integration suites
+│   ├── test_api.py
+│   └── test_detector.py
+├── docker-compose.yml      # Local dev orchestration
+├── docker-compose.prod.yml # Production orchestration
+├── requirements.txt
+└── Makefile
