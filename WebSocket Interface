@@ -1,0 +1,29 @@
+Full-duplex low-latency endpoint for streaming video frames.
+
+On Connect: Server sends a handshake payload acknowledging session creation:
+
+JSON
+{
+  "type": "handshake",
+  "session_id": "e4b2d189-3221-4f9e-a89c-8a623f2f0122",
+  "message": "Session initialized successfully"
+}
+Client Frame Payload: Send base64-encoded JPEG frame string:
+
+JSON
+{
+  "frame": "/9j/4AAQSkZJRgABAQAAAQABAAD..."
+}
+Server Response: Returns detection state and annotated base64 frame:
+
+JSON
+{
+  "session_id": "e4b2d189-3221-4f9e-a89c-8a623f2f0122",
+  "frame": "/9j/4AAQSkZJRgABAQAAAQABAAD...",
+  "ear": 0.19,
+  "mar": 2.15,
+  "drowsy": true,
+  "yawning": true,
+  "sleeping": false,
+  "timestamp": "2026-10-12T13:30:01"
+}
