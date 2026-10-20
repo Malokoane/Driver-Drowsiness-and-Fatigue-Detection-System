@@ -12,3 +12,16 @@
   },
   "include": ["src", "scripts", "test"]
 }
+{
+  "deviceUuid": "ESP32-GLASSES-01",
+  "sessionId": 1,
+  "telemetry": {
+    "blinkRateBpm": 1,
+    "perclosScore": 100.0,
+    "headTiltAngle": 90.0,
+    "irState": 1,
+    "closureMs": 2000,
+    "buzzerActive": true
+  },
+  "timestamp": 1729368000
+}
